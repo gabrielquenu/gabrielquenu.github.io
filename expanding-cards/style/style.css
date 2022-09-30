@@ -14,29 +14,33 @@ html {
 
 main {
     height: 100%;
-    background-color: #EFEBE9;
+    background: rgb(159, 175, 171);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .gallery {
-    flex: 0.96;
+    flex: 0.94;
     height: 94%;
-    border: 2px solid rgb(159, 175, 171);
     border-radius: 10px;
-    padding: .2rem;
+    padding: 1rem;
     list-style: none;
 
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     gap: .4rem;
+
+    background: whitesmoke;
 }
 
 .gallery-item-selected {
     height: 100%;
     width: 68%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: height .25s, width .5s .25s;
 }
 
@@ -46,23 +50,35 @@ main {
     object-fit: cover;
     object-position: center;
     border-radius: 10px;
+    transition: transform .5s, border-radius .5s .5s, width .5s .5s, height .5s 1s;
 }
 
 .gallery-item {
-    height: 60%;
-    width: 8%;
+    height: 100%;
+    width: 12%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: width .5s, height 0.25s .5s;
 }
 
 .gallery-item img {
-    height: 100%;
-    width: 100%;
+    height: 4.4rem;
+    width: 4.4rem;
     object-fit: cover;
     object-fit: center;
-    border-radius: 10px;
+    border-radius: 50%;
+    transform: rotate(360deg);
+    transition: height .5s, width .5s .5s, border-radius .5s .5s, transform .5s 1s;
 }
 
 
 img:hover {
     cursor: pointer;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    transform: rotate(0deg);
+    transition: transform .5s, border-radius .5s .5s, width .5s .5s, height .5s 1s;
+
 }
