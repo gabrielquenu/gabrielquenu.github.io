@@ -63,6 +63,10 @@ main {
     transition: transform .5s, width .5s, border-radius .5s .5s, height 1s 1s;
 }
 
+.gallery-item span {
+    display: none;
+}
+
 .gallery-item-selected {
     height: 100%;
     width: 68%;
@@ -70,6 +74,8 @@ main {
     align-items: center;
     justify-content: center;
     transition: width .5s;
+
+    position: relative;
 }
 
 .gallery-item-selected img {
@@ -83,4 +89,12 @@ main {
 
 .gallery-item-selected img:hover {
     cursor: pointer;
+}
+
+.gallery-item-selected span {
+    position: absolute;
+    bottom: 2%;
+    left: 2%;
+    font-size: 100%;
+    color: whitesmoke;
 }
